@@ -156,7 +156,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                12
+                15
                 <span>文章</span>
             </div>
             <div class="article-info-block">
@@ -346,6 +346,438 @@
 
 
 
+    <article id="post-百度前端技术学院Task8-2017" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<a href="/2017/04/16/百度前端技术学院Task8-2017/" itemprop="url">
+            <img src="http://onxn8u1eg.bkt.clouddn.com/image/posts/javascripts/IFE-JS.jpg" class="article-banner" />
+        </a>
+	
+
+
+
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/04/16/百度前端技术学院Task8-2017/">百度前端技术学院Task8</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/04/16/百度前端技术学院Task8-2017/">
+            <time datetime="2017-04-16T06:06:13.000Z" itemprop="datePublished">2017-04-16</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/JavaScript/">-JavaScript</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>, <a class="tag-link" href="/tags/百度前端技术学院/">百度前端技术学院</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h1 id="百度前端技术学院Task8-2017"><a href="#百度前端技术学院Task8-2017" class="headerlink" title="百度前端技术学院Task8(2017)"></a>百度前端技术学院Task8(2017)</h1><h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><p>基于Task7，参考示例图，将二叉树变成了多叉树，并且每一个节点中带有内容<br>提供一个按钮，显示开始遍历，点击后，以动画的形式呈现遍历的过程<br>当前被遍历到的节点做一个特殊显示（比如不同的颜色）<br>每隔一段时间（500ms，1s等时间自定）再遍历下一个节点<br>增加一个输入框及一个“查询”按钮，点击按钮时，开始在树中以动画形式查找节点内容和输入框中内容一致的节点，找到后以特殊样式显示该节点，找不到的话给出找不到的提示。查询过程中的展示过程和遍历过程保持一致<br></p>
+            <p class="article-more-link">
+                <a href="/2017/04/16/百度前端技术学院Task8-2017/#more">查看更多</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://aldrichfork.com/2017/04/16/百度前端技术学院Task8-2017/" data-id="cj333arxp0000wop0859x47au" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://aldrichfork.com/2017/04/16/百度前端技术学院Task8-2017/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://aldrichfork.com/2017/04/16/百度前端技术学院Task8-2017/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-视频【瞎看什么】二号去听经" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<a href="/2017/04/16/视频【瞎看什么】二号去听经/" itemprop="url">
+            <img src="http://i1.hdslb.com/bfs/archive/ffc30e2f0bd59afd3fa5c62d5a58864a0f307301.jpg" class="article-banner" />
+        </a>
+	
+
+
+
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/04/16/视频【瞎看什么】二号去听经/">视频【瞎看什么】看了100000部电影，才杀死一个孩子</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/04/16/视频【瞎看什么】二号去听经/">
+            <time datetime="2017-04-15T16:27:00.000Z" itemprop="datePublished">2017-04-16</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/video/">-video</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/有趣/">有趣</a>, <a class="tag-link" href="/tags/瞎看什么/">瞎看什么</a>, <a class="tag-link" href="/tags/视频/">视频</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h1 id="二号去听经-晚上住旅店-三号去餐厅-然后看电影"><a href="#二号去听经-晚上住旅店-三号去餐厅-然后看电影" class="headerlink" title="二号去听经,晚上住旅店.三号去餐厅,然后看电影"></a>二号去听经,晚上住旅店.三号去餐厅,然后看电影</h1><p>转载自：<a href="http://weibo.com/u/3394123104">@瞎看什么</a></p>
+<p>电影：《误杀瞒天记》</p>
+<p><a href="http://www.imdb.com/title/tt4430212/">IMDb 评分</a>：8.4</p>
+<p><a href="https://movie.douban.com/subject/26419637/">豆瓣评分</a>：8.2</p></p>
+            <p class="article-more-link">
+                <a href="/2017/04/16/视频【瞎看什么】二号去听经/#more">查看更多</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://aldrichfork.com/2017/04/16/视频【瞎看什么】二号去听经/" data-id="cj333aryk0004wop0zny1kx1c" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://aldrichfork.com/2017/04/16/视频【瞎看什么】二号去听经/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://aldrichfork.com/2017/04/16/视频【瞎看什么】二号去听经/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-百度前端技术学院Task7-2017" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<a href="/2017/04/15/百度前端技术学院Task7-2017/" itemprop="url">
+            <img src="http://onxn8u1eg.bkt.clouddn.com/image/posts/javascripts/IFE-JS.jpg" class="article-banner" />
+        </a>
+	
+
+
+
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/04/15/百度前端技术学院Task7-2017/">百度前端技术学院Task7</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/04/15/百度前端技术学院Task7-2017/">
+            <time datetime="2017-04-15T15:55:58.000Z" itemprop="datePublished">2017-04-15</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/JavaScript/">-JavaScript</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>, <a class="tag-link" href="/tags/百度前端技术学院/">百度前端技术学院</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h1 id="百度前端技术学院Task7-2017"><a href="#百度前端技术学院Task7-2017" class="headerlink" title="百度前端技术学院Task7(2017)"></a>百度前端技术学院Task7(2017)</h1><h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><p>参考示例图<br>在页面中展现一颗二叉树的结构<br>提供一个按钮，显示开始遍历，点击后，以动画的形式呈现遍历的过程<br>二叉树的遍历算法和方式自定，前序中序后序皆可，但推荐可以提供多种算法的展示（增加多个按钮，每个按钮对应不同的算法）<br>当前被遍历到的节点做一个特殊显示（比如不同的颜色）<br>每隔一段时间（500ms，1s等时间自定）再遍历下一个节点<br></p>
+            <p class="article-more-link">
+                <a href="/2017/04/15/百度前端技术学院Task7-2017/#more">查看更多</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://aldrichfork.com/2017/04/15/百度前端技术学院Task7-2017/" data-id="cj32hjxsu0000s0p0fe9f0ieh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://aldrichfork.com/2017/04/15/百度前端技术学院Task7-2017/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://aldrichfork.com/2017/04/15/百度前端技术学院Task7-2017/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-百度前端技术学院Task6-2017" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -364,7 +796,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2017/04/15/百度前端技术学院Task6-2017/">百度前端技术学院Task6(2017)</a>
+            <a class="article-title" href="/2017/04/15/百度前端技术学院Task6-2017/">百度前端技术学院Task6</a>
         </h1>
     
 
@@ -398,7 +830,7 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h1 id="百度前端技术学院Task6"><a href="#百度前端技术学院Task6" class="headerlink" title="百度前端技术学院Task6"></a>百度前端技术学院Task6</h1><h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><p>基于Task4进行升级<br>将新元素输入框从input改为textarea<br>允许一次批量输入多个内容，格式可以为数字、中文、英文等，可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为不同内容的间隔<br>增加一个查询文本输入框，和一个查询按钮，当点击查询时，将查询词在各个元素内容中做模糊匹配，将匹配到的内容进行特殊标识，如文字颜色等。举例，内容中有abcd，查询词为ab或bc，则该内容需要标识<br></p>
+            <p><h1 id="百度前端技术学院Task6-2017"><a href="#百度前端技术学院Task6-2017" class="headerlink" title="百度前端技术学院Task6(2017)"></a>百度前端技术学院Task6(2017)</h1><h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><p>基于Task4进行升级<br>将新元素输入框从input改为textarea<br>允许一次批量输入多个内容，格式可以为数字、中文、英文等，可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为不同内容的间隔<br>增加一个查询文本输入框，和一个查询按钮，当点击查询时，将查询词在各个元素内容中做模糊匹配，将匹配到的内容进行特殊标识，如文字颜色等。举例，内容中有abcd，查询词为ab或bc，则该内容需要标识<br></p>
             <p class="article-more-link">
                 <a href="/2017/04/15/百度前端技术学院Task6-2017/#more">查看更多</a>
             </p>
@@ -947,7 +1379,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2017/04/13/百度前端技术学院Task5-2017/">百度前端技术学院Task5(2017)</a>
+            <a class="article-title" href="/2017/04/13/百度前端技术学院Task5-2017/">百度前端技术学院Task5</a>
         </h1>
     
 
@@ -981,7 +1413,7 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h1 id="百度前端技术学院Task5"><a href="#百度前端技术学院Task5" class="headerlink" title="百度前端技术学院Task5"></a>百度前端技术学院Task5</h1><h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><p>基于Task4<br>限制输入的数字在10-100<br>队列元素数量最多限制为60个，当超过60个时，添加元素时alert出提示<br>队列展现方式变化如图，直接用高度表示数字大小<br>实现一个简单的排序功能，如冒泡排序（不限制具体算法），用可视化的方法表达出来，参考见下方参考资料<br><a href="http://www.imooc.com/view/36">JavaScript入门篇</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript">MDN JavaScript</a><br></p>
+            <p><h1 id="百度前端技术学院Task5-2017"><a href="#百度前端技术学院Task5-2017" class="headerlink" title="百度前端技术学院Task5(2017)"></a>百度前端技术学院Task5(2017)</h1><h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><p>基于Task4<br>限制输入的数字在10-100<br>队列元素数量最多限制为60个，当超过60个时，添加元素时alert出提示<br>队列展现方式变化如图，直接用高度表示数字大小<br>实现一个简单的排序功能，如冒泡排序（不限制具体算法），用可视化的方法表达出来，参考见下方参考资料<br><a href="http://www.imooc.com/view/36">JavaScript入门篇</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript">MDN JavaScript</a><br></p>
             <p class="article-more-link">
                 <a href="/2017/04/13/百度前端技术学院Task5-2017/#more">查看更多</a>
             </p>
@@ -1090,7 +1522,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2017/04/12/百度前端技术学院Task4-2017/">百度前端技术学院Task4(2017)</a>
+            <a class="article-title" href="/2017/04/12/百度前端技术学院Task4-2017/">百度前端技术学院Task4</a>
         </h1>
     
 
@@ -1124,7 +1556,7 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h1 id="百度前端技术学院Task4"><a href="#百度前端技术学院Task4" class="headerlink" title="百度前端技术学院Task4"></a>百度前端技术学院Task4</h1><h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><p>如图</p>
+            <p><h1 id="百度前端技术学院Task4-2017"><a href="#百度前端技术学院Task4-2017" class="headerlink" title="百度前端技术学院Task4(2017)"></a>百度前端技术学院Task4(2017)</h1><h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><p>如图</p>
 <p><img src="http://7xrp04.com1.z0.glb.clouddn.com/task_2_18_1.jpg" alt=""></p>
 <p>模拟一个队列，队列的每个元素是一个数字，初始队列为空<br>有一个input输入框，以及4个操作按钮</p>
 <ul>
@@ -1223,435 +1655,6 @@
 
 
 
-    <article id="post-win10系统安装" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            
-	
-		<a href="/2017/04/11/win10系统安装/" itemprop="url">
-            <img src="http://onxn8u1eg.bkt.clouddn.com/windows10.jpg?imageslim" class="article-banner" />
-        </a>
-	
-
-
-
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/04/11/win10系统安装/">全新安装Windows10操作系统——写给我的几个朋友</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/04/11/win10系统安装/">
-            <time datetime="2017-04-11T07:01:25.000Z" itemprop="datePublished">2017-04-11</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/other/">-other</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Windows/">Windows</a>, <a class="tag-link" href="/tags/有智/">有智</a>, <a class="tag-link" href="/tags/生产工具/">生产工具</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h1 id="全新安装Windows10操作系统——写给我的几个朋友"><a href="#全新安装Windows10操作系统——写给我的几个朋友" class="headerlink" title="全新安装Windows10操作系统——写给我的几个朋友"></a>全新安装Windows10操作系统——写给我的几个朋友</h1><p>本文非专业教程，内容部分来自互联网。其实我不太会写教程一类的东西，但 是我的几个朋友经常会问我一些关于重新安装windows操作系统的事情，所以我想还是写点什么来帮助我的朋友们，姑且叫它教程吧。<br></p>
-            <p class="article-more-link">
-                <a href="/2017/04/11/win10系统安装/#more">查看更多</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://aldrichfork.com/2017/04/11/win10系统安装/" data-id="cj2g5yojh0007ssp0wdyr6uy6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://aldrichfork.com/2017/04/11/win10系统安装/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://aldrichfork.com/2017/04/11/win10系统安装/">评论</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-百度前端技术学院Task3-2017" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            
-	
-		<a href="/2017/04/11/百度前端技术学院Task3-2017/" itemprop="url">
-            <img src="http://onxn8u1eg.bkt.clouddn.com/image/posts/javascripts/IFE-JS.jpg" class="article-banner" />
-        </a>
-	
-
-
-
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/04/11/百度前端技术学院Task3-2017/">百度前端技术学院Task3(2017)</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/04/11/百度前端技术学院Task3-2017/">
-            <time datetime="2017-04-11T06:43:04.000Z" itemprop="datePublished">2017-04-11</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/JavaScript/">-JavaScript</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>, <a class="tag-link" href="/tags/百度前端技术学院/">百度前端技术学院</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h1 id="百度前端技术学院Task3"><a href="#百度前端技术学院Task3" class="headerlink" title="百度前端技术学院Task3"></a>百度前端技术学院Task3</h1><h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><p>参考以下示例代码，读取页面上已有的source列表，从中提取出城市以及对应的空气质量<br>将数据按照某种顺序排序后，在resort列表中按照顺序显示出来</p></p>
-            <p class="article-more-link">
-                <a href="/2017/04/11/百度前端技术学院Task3-2017/#more">查看更多</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://aldrichfork.com/2017/04/11/百度前端技术学院Task3-2017/" data-id="cj31tpu3800008sp0zmq7f1rd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://aldrichfork.com/2017/04/11/百度前端技术学院Task3-2017/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://aldrichfork.com/2017/04/11/百度前端技术学院Task3-2017/">评论</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-百度前端技术学院Task2-2017" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            
-	
-		<a href="/2017/04/11/百度前端技术学院Task2-2017/" itemprop="url">
-            <img src="http://onxn8u1eg.bkt.clouddn.com/image/posts/javascripts/IFE-JS.jpg" class="article-banner" />
-        </a>
-	
-
-
-
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/04/11/百度前端技术学院Task2-2017/">百度前端技术学院Task2(2017)</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/04/11/百度前端技术学院Task2-2017/">
-            <time datetime="2017-04-11T03:26:04.000Z" itemprop="datePublished">2017-04-11</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/JavaScript/">-JavaScript</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>, <a class="tag-link" href="/tags/百度前端技术学院/">百度前端技术学院</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h1 id="百度前端技术学院Task2"><a href="#百度前端技术学院Task2" class="headerlink" title="百度前端技术学院Task2"></a>百度前端技术学院Task2</h1><h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><p>参考以下示例代码，页面加载后，将提供的空气质量数据数组，按照某种逻辑（比如空气质量大于60）进行过滤筛选，最后将符合条件的数据按照一定的格式要求显示在网页上<br></p>
-            <p class="article-more-link">
-                <a href="/2017/04/11/百度前端技术学院Task2-2017/#more">查看更多</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://aldrichfork.com/2017/04/11/百度前端技术学院Task2-2017/" data-id="cj31tpums00098sp096qgsxfy" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://aldrichfork.com/2017/04/11/百度前端技术学院Task2-2017/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://aldrichfork.com/2017/04/11/百度前端技术学院Task2-2017/">评论</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
     <nav id="page-nav">
         <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
     </nav>
@@ -1687,10 +1690,10 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/04/15/百度前端技术学院Task6-2017/" class="thumbnail">
+                            <a href="/2017/04/16/百度前端技术学院Task8-2017/" class="thumbnail">
     
     
-        <span style="background-image:url(http://onxn8u1eg.bkt.clouddn.com/image/posts/javascripts/IFE-JS-thumb.jpg)" alt="百度前端技术学院Task6(2017)" class="thumbnail-image"></span>
+        <span style="background-image:url(http://onxn8u1eg.bkt.clouddn.com/image/posts/javascripts/IFE-JS-thumb.jpg)" alt="百度前端技术学院Task8" class="thumbnail-image"></span>
     
 </a>
 
@@ -1698,37 +1701,18 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/JavaScript/">-JavaScript</a></p>
-                            <p class="item-title"><a href="/2017/04/15/百度前端技术学院Task6-2017/" class="title">百度前端技术学院Task6(2017)</a></p>
-                            <p class="item-date"><time datetime="2017-04-15T01:18:46.000Z" itemprop="datePublished">2017-04-15</time></p>
+                            <p class="item-title"><a href="/2017/04/16/百度前端技术学院Task8-2017/" class="title">百度前端技术学院Task8</a></p>
+                            <p class="item-date"><time datetime="2017-04-16T06:06:13.000Z" itemprop="datePublished">2017-04-16</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/04/15/音乐  僕が死のうと思ったのは (Live)/" class="thumbnail">
+                            <a href="/2017/04/16/视频【瞎看什么】二号去听经/" class="thumbnail">
     
     
-        <span style="background-image:url(http://i0.hdslb.com/bfs/archive/2f5ec1241254241097535abea43718319bd96c53.jpg)" alt="音乐  僕が死のうと思ったのは (Live)" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Music/">-Music</a></p>
-                            <p class="item-title"><a href="/2017/04/15/音乐  僕が死のうと思ったのは (Live)/" class="title">音乐  僕が死のうと思ったのは (Live)</a></p>
-                            <p class="item-date"><time datetime="2017-04-14T17:34:02.000Z" itemprop="datePublished">2017-04-15</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/04/14/视频【瞎看什么】在没有快捷酒店的年代，我是这样给领导暖床的/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://i0.hdslb.com/bfs/archive/2bb4ee842348f909a0e7a8df58ae5d262fedc8b3.jpg)" alt="视频【瞎看什么】在没有快捷酒店的年代，我是这样给领导暖床的" class="thumbnail-image"></span>
+        <span style="background-image:url(http://i2.hdslb.com/bfs/face/ca58a72682f108d42a94aba4c72022750f0096ad.jpg)" alt="视频【瞎看什么】看了100000部电影，才杀死一个孩子" class="thumbnail-image"></span>
     
 </a>
 
@@ -1736,27 +1720,46 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/video/">-video</a></p>
-                            <p class="item-title"><a href="/2017/04/14/视频【瞎看什么】在没有快捷酒店的年代，我是这样给领导暖床的/" class="title">视频【瞎看什么】在没有快捷酒店的年代，我是这样给领导暖床的</a></p>
-                            <p class="item-date"><time datetime="2017-04-14T15:27:00.000Z" itemprop="datePublished">2017-04-14</time></p>
+                            <p class="item-title"><a href="/2017/04/16/视频【瞎看什么】二号去听经/" class="title">视频【瞎看什么】看了100000部电影，才杀死一个孩子</a></p>
+                            <p class="item-date"><time datetime="2017-04-15T16:27:00.000Z" itemprop="datePublished">2017-04-16</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/04/13/Webstorm使用技巧总结/" class="thumbnail">
+                            <a href="/2017/04/15/百度前端技术学院Task7-2017/" class="thumbnail">
     
     
-        <span style="background-image:url(http://onxn8u1eg.bkt.clouddn.com/images/posts/webstorm-thumb.jpg?imageslim)" alt="Webstorm使用技巧总结-慢更" class="thumbnail-image"></span>
+        <span style="background-image:url(http://onxn8u1eg.bkt.clouddn.com/image/posts/javascripts/IFE-JS-thumb.jpg)" alt="百度前端技术学院Task7" class="thumbnail-image"></span>
     
 </a>
 
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Tools/">-Tools</a></p>
-                            <p class="item-title"><a href="/2017/04/13/Webstorm使用技巧总结/" class="title">Webstorm使用技巧总结-慢更</a></p>
-                            <p class="item-date"><time datetime="2017-04-13T09:59:25.000Z" itemprop="datePublished">2017-04-13</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/JavaScript/">-JavaScript</a></p>
+                            <p class="item-title"><a href="/2017/04/15/百度前端技术学院Task7-2017/" class="title">百度前端技术学院Task7</a></p>
+                            <p class="item-date"><time datetime="2017-04-15T15:55:58.000Z" itemprop="datePublished">2017-04-15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/15/百度前端技术学院Task6-2017/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://onxn8u1eg.bkt.clouddn.com/image/posts/javascripts/IFE-JS-thumb.jpg)" alt="百度前端技术学院Task6" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/JavaScript/">-JavaScript</a></p>
+                            <p class="item-title"><a href="/2017/04/15/百度前端技术学院Task6-2017/" class="title">百度前端技术学院Task6</a></p>
+                            <p class="item-date"><time datetime="2017-04-15T01:18:46.000Z" itemprop="datePublished">2017-04-15</time></p>
                         </div>
                     </li>
                 
@@ -1769,7 +1772,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">-JavaScript</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">-Music</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/">-Tools</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/other/">-other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/video/">-video</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">-JavaScript</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">-Music</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/">-Tools</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/other/">-other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/video/">-video</a><span class="category-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -1778,7 +1781,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">12</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">15</span></li></ul>
         </div>
     </div>
 
@@ -1787,7 +1790,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MV/" style="font-size: 10px;">MV</a> <a href="/tags/Webstorm/" style="font-size: 10px;">Webstorm</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/心情不错/" style="font-size: 10px;">心情不错</a> <a href="/tags/有智/" style="font-size: 15px;">有智</a> <a href="/tags/有爱/" style="font-size: 10px;">有爱</a> <a href="/tags/有趣/" style="font-size: 10px;">有趣</a> <a href="/tags/生产工具/" style="font-size: 12.5px;">生产工具</a> <a href="/tags/百度前端技术学院/" style="font-size: 17.5px;">百度前端技术学院</a> <a href="/tags/瞎看什么/" style="font-size: 10px;">瞎看什么</a> <a href="/tags/视频/" style="font-size: 10px;">视频</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a>
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MV/" style="font-size: 10px;">MV</a> <a href="/tags/Webstorm/" style="font-size: 10px;">Webstorm</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/心情不错/" style="font-size: 10px;">心情不错</a> <a href="/tags/有智/" style="font-size: 15px;">有智</a> <a href="/tags/有爱/" style="font-size: 10px;">有爱</a> <a href="/tags/有趣/" style="font-size: 12.5px;">有趣</a> <a href="/tags/生产工具/" style="font-size: 12.5px;">生产工具</a> <a href="/tags/百度前端技术学院/" style="font-size: 17.5px;">百度前端技术学院</a> <a href="/tags/瞎看什么/" style="font-size: 12.5px;">瞎看什么</a> <a href="/tags/视频/" style="font-size: 12.5px;">视频</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a>
         </div>
     </div>
 
